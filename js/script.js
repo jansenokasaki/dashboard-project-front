@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const backendBaseUrl = 'http://localhost:5000/api'; // Endereço do back-end
+    // const backendBaseUrl = 'http://localhost:5000/api';
+    const backendBaseUrl = 'https://dashboard-project-backend.vercel.app/api'; // Coloque aqui a URL de produção do backend
+ // Endereço do back-end
 
     // Selecionar elementos da página
     const saveProductBtn = document.getElementById('save-product-btn');
@@ -13,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Função para buscar o clima de Recife
     async function fetchWeather() {
         try {
-            const response = await fetch(`http://localhost:5000/api/weather`);
+            const response = await fetch(`${backendBaseUrl}/weather`);
             if (!response.ok) {
                 throw new Error('Erro ao buscar clima');
             }
