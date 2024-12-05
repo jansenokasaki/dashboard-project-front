@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Dashboard - Produtos e Clima</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-chart-gauge@1.0.0"></script>
+</head>
+
+<body>
+    <div class="caixa">
+        <img src="img/sol.png" alt="Logo" width="500px" class="img-acima">
+        <div class="container">
+        
+            <h1>Dashboard - Gerenciamento de Produtos e Status Climáticos</h1>
+            <div class="form-section">
+                <h2>Cadastrar Produto</h2>
+                <input type="hidden" id="product-id">
+                <input type="text" id="product-name" placeholder="Nome do Produto">
+                <input type="number" id="product-price" placeholder="Preço">
+                <input type="number" id="product-quantity" placeholder="Quantidade">
+                <button id="save-product-btn">Salvar Produto</button>
+            </div>
+            <div class="weather-section">
+                <h2>Status Climático de Recife</h2>
+                <div id="weather-result"></div>
+            </div>
+            <div class="products-section">
+                <h2>Lista de Produtos</h2>
+                <ul id="products-list"></ul>
+            </div>
+        </div>
+        <script src="js/script.js"></script>
+    </div>
+</body>
+
+</html>
